@@ -5,4 +5,5 @@ jobs:
   build:
     uses: gardenlinux/package-build/.github/workflows/build.yml@main
     with:
-      release: false
+      release: true
+      runs-on-arm64: false
