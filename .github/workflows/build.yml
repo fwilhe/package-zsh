@@ -3,12 +3,6 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    runs-on: ubuntu-24.04
-    steps:
-    - name: Set up QEMU
-      uses: docker/setup-qemu-action@v3
-    - uses: gardenlinux/package-build/.github/workflows/build.yml@main
-      with:
-        release: false
-        runs-on-arm64: ubuntu-24.04
-        runs-on-amd64: ubuntu-24.04
+    uses: gardenlinux/package-build/.github/workflows/build.yml@main
+    with:
+      release: false
