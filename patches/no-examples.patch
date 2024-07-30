@@ -1,0 +1,12 @@
+--- a/debian/rules	2024-01-09 10:14:12.000000000 +0000
++++ b/debian/rules	2024-07-30 08:46:59.279843152 +0000
+@@ -125,9 +125,6 @@
+
+ override_dh_installexamples-indep:
+ 	dh_installexamples -pzsh-common -X.distfiles
+-	cd debian/zsh-common/usr/share/doc/zsh-common/examples/; mv Example Functions
+-	sed -i -e '1!b;s:^#!.*[ /]zsh:#!/bin/zsh:;s#/usr/local/bin#/usr/bin#' \
+-	   debian/zsh-common/usr/share/doc/zsh-common/examples/Misc/*
+
+ execute_after_dh_install-indep:
+ # Doesn't this need to go before we zcompile stuff into .zwc files? -- Axel
